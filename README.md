@@ -14,7 +14,7 @@ tweaks your ROM already applies.
 
 | Unfolded — floating beside the carousel | Folded — in the Screenshot / Select row |
 |---|---|
-| <img src="https://raw.githubusercontent.com/U-rTrDD-fyi/recents-clear-all/main/screenshots/unfolded.png" width="420"> | <img src="https://raw.githubusercontent.com/U-rTrDD-fyi/recents-clear-all/main/screenshots/folded.png" width="220"> |
+| <img src="https://raw.githubusercontent.com/aayy-dev/recents-clear-all/main/screenshots/unfolded.png" width="420"> | <img src="https://raw.githubusercontent.com/aayy-dev/recents-clear-all/main/screenshots/folded.png" width="220"> |
 
 ## Where the button goes
 

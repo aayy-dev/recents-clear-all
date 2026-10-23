@@ -68,6 +68,7 @@ settings put system clear_all_button_gravity 0
 ## Compatibility
 
 - Pixel Launcher (`com.google.android.apps.nexuslauncher`)
+- AOSP Launcher3 (`com.android.launcher3`)
 - Developed and tested on Android 16 on a Pixel Fold, on both panels
 - Requires an Xposed framework — LSPosed, or a maintained fork such as Vector
 

@@ -48,7 +48,11 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
  */
 public class ClearAllModule implements IXposedHookLoadPackage {
 
-    private static final String LAUNCHER = "com.google.android.apps.nexuslauncher";
+    /** All launcher packages that ship the Quickstep recents stack. */
+    private static final String[] LAUNCHERS = {
+        "com.google.android.apps.nexuslauncher",  // Pixel Launcher
+        "com.android.launcher3",                   // AOSP Launcher3
+    };
     private static final String RECENTS_VIEW = "com.android.quickstep.views.RecentsView";
     private static final String ACTIONS_VIEW = "com.android.quickstep.views.OverviewActionsView";
 
@@ -93,7 +97,11 @@ public class ClearAllModule implements IXposedHookLoadPackage {
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) {
-        if (!LAUNCHER.equals(lpparam.packageName)) return;
+        boolean knownLauncher = false;
+        for (String pkg : LAUNCHERS) {
+            if (pkg.equals(lpparam.packageName)) { knownLauncher = true; break; }
+        }
+        if (!knownLauncher) return;
 
         try {
             Class<?> recentsView = XposedHelpers.findClass(RECENTS_VIEW, lpparam.classLoader);
